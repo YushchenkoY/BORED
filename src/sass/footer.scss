@@ -1,0 +1,35 @@
+.footer {
+    width: 100vw;
+    height: 48px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer__link {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    line-height: 48px;
+    color: #323232;
+}
+
+@media (min-width: $breakpoint-m) {
+    .footer__link {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: $breakpoint-l) {
+    .footer__link {
+        font-size: 24px;
+    }
+}
+
+@media (min-width: $breakpoint-xl) {
+    .footer {
+        padding-left: 115px;
+        justify-content: left;
+        :nth-child(2){
+            margin: 0 82px;
+        }
+    }
+}
