@@ -68,7 +68,7 @@
 }
 .header {
   width: 100%;
-  height: 54px;
+  height: 44px;
   color: white;
   display: flex;
   justify-content: space-between;
@@ -99,9 +99,9 @@
 
 .header__btn {
   width: 130px;
-  height: 40px;
+  height: 30px;
   font-size: 20px;
-  line-height: 40px;
+  line-height: 30px;
 }
 
 @media (min-width: 560px) {
@@ -126,7 +126,7 @@
 .main {
   position: relative;
   width: 100vw;
-  height: calc(100vh - 27px - 54px);
+  height: calc(100vh - 27px - 44px);
   background-image: url("../img/BG-mob.png");
   background-size: 100% 100%;
   display: flex;
@@ -139,26 +139,7 @@
   flex-direction: column;
   align-items: center;
   height: 35%;
-  justify-content: space-around;
-}
-
-.main__title {
-  font-family: "Noto Sans KR", sans-serif;
-  font-style: italic;
-  font-weight: 800;
-  font-size: 24px;
-  color: #FFFFFF;
-  margin: 10px 0;
-}
-
-.main__text-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.main__title,
-.main__text-wrapper {
+  justify-content: center;
   animation-timing-function: ease;
   animation-name: text;
   animation-duration: 3s;
@@ -170,6 +151,7 @@
   font-weight: 600;
   font-size: 18px;
   color: #FFFFFF;
+  padding: 5px 0;
 }
 
 .main__btn-wrapper {
@@ -228,7 +210,7 @@
 .girl-left {
   left: 0;
   background-image: url(../img/girl-l.png);
-  width: 72%;
+  width: 75%;
   z-index: 1;
   animation-name: girl-left;
   position: relative;
@@ -250,9 +232,10 @@
 .girl-right {
   right: 0;
   background-image: url(../img/girl-r.png);
-  width: 50%;
+  width: 60%;
   z-index: 2;
   animation-name: girl-right;
+  position: relative;
   background-position: left bottom;
 }
 
@@ -278,10 +261,6 @@
 }
 
 @media (min-width: 560px) {
-  .main__title {
-    font-size: 36px;
-  }
-
   .main__text {
     font-size: 28px;
   }
@@ -311,6 +290,7 @@
   .girl-left,
 .girl-right {
     background-position: center bottom;
+    background-size: contain;
   }
 
   .girl-right::after {
@@ -319,14 +299,10 @@
   }
 }
 @media (min-width: 992px) {
-  .main__girl {
-    background-size: auto 100%;
-  }
-
   .girl-right::after {
     width: 250px;
     height: 150px;
-    bottom: 70%;
+    bottom: 75%;
   }
 
   .girl-left::after {
@@ -337,10 +313,6 @@
   }
 }
 @media (min-width: 1200px) {
-  .main__title {
-    font-size: 38px;
-  }
-
   .main__text {
     font-size: 28px;
   }
@@ -369,10 +341,6 @@
     z-index: 20;
   }
 
-  .main__text-wrapper {
-    align-items: flex-start;
-  }
-
   .main__girls-wrapper {
     width: 65%;
     height: 100%;
@@ -383,8 +351,15 @@
     left: 35%;
   }
 
+  .girl-left,
+.girl-right {
+    top: 10%;
+    height: 90%;
+  }
+
   .girl-left {
     width: 72%;
+    background-position: right bottom;
   }
 
   .girl-left::after {
@@ -395,13 +370,8 @@
   }
 
   .girl-right {
-    width: 50%;
-  }
-
-  .girl-left,
-.girl-right {
-    top: 10%;
-    height: 90%;
+    width: 55%;
+    background-position: right bottom;
   }
 
   .girl-right::after {
@@ -410,11 +380,6 @@
     left: auto;
     right: 10%;
     top: -10%;
-  }
-
-  .girl-left,
-.girl-right {
-    background-position: right bottom;
   }
 
   .main__btn-wrapper {

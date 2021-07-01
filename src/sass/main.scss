@@ -1,7 +1,7 @@
 .main {
     position: relative;
     width: 100vw;
-    height: calc(100vh - 27px - 54px);
+    height: calc(100vh - 27px - 44px);
     background-image: url("../img/BG-mob.png");
     background-size: 100% 100%;
     display: flex;
@@ -14,30 +14,12 @@
     flex-direction: column;
     align-items: center;
     height: 35%;
-    justify-content: space-around;
-}
-
-.main__title {
-    font-family: 'Noto Sans KR', sans-serif;
-    font-style: italic;
-    font-weight: 800;
-    font-size: 24px;
-    color: #FFFFFF;
-    margin: 10px 0;
-}
-
-.main__text-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.main__title,
-.main__text-wrapper {
+    justify-content: center;
     animation-timing-function: ease;
     animation-name: text;
     animation-duration: 3s;
 }
+
 
 .main__text {
     font-family: 'Noto Sans KR', sans-serif;
@@ -45,6 +27,7 @@
     font-weight: 600;
     font-size: 18px;
     color: #FFFFFF;
+    padding: 5px 0;
 }
 
 .main__btn-wrapper {
@@ -98,13 +81,12 @@
     bottom: 0;
     animation-duration: 2s;
     animation-timing-function: ease;
-
 }
 
 .girl-left {
     left: 0;
     background-image: url(../img/girl-l.png);
-    width: 72%;
+    width: 75%;
     z-index: 1;
     animation-name: girl-left;
     position: relative;
@@ -126,11 +108,11 @@
 .girl-right {
     right: 0;
     background-image: url(../img/girl-r.png);
-    width: 50%;
+    width: 60%;
     z-index: 2;
     animation-name: girl-right;
+    position: relative;
     background-position: left bottom;
-
 }
 
 .girl-right::after {
@@ -146,8 +128,9 @@
     background-size: 100% 100%;
 
 }
+
 .girl-left::after,
-.girl-right::after{
+.girl-right::after {
     animation-name: spark;
     animation-duration: 3s;
     animation-timing-function: ease;
@@ -155,10 +138,6 @@
 }
 
 @media (min-width: $breakpoint-s) {
-    .main__title {
-        font-size: 36px;
-    }
-
     .main__text {
         font-size: 28px;
     }
@@ -190,7 +169,10 @@
     .girl-left,
     .girl-right {
         background-position: center bottom;
+        background-size: contain;
+
     }
+
     .girl-right::after {
         left: auto;
         right: 20%;
@@ -200,19 +182,15 @@
 }
 
 @media (min-width: $breakpoint-l) {
-    .main__girl {
-        background-size: auto 100%;
-    }
-
     .girl-right::after {
         width: 250px;
         height: 150px;
-        bottom: 70%;
+        bottom: 75%;
     }
 
     .girl-left::after {
         width: 250px;
-        height: 150px;        
+        height: 150px;
         left: auto;
         right: 50%;
     }
@@ -220,9 +198,6 @@
 
 
 @media (min-width: $breakpoint-xl) {
-    .main__title {
-        font-size: 38px;
-    }
 
     .main__text {
         font-size: 28px;
@@ -253,9 +228,6 @@
         z-index: 20;
     }
 
-    .main__text-wrapper {
-        align-items: flex-start;
-    }
 
     .main__girls-wrapper {
         width: 65%;
@@ -266,9 +238,20 @@
         bottom: 0;
         left: 35%;
     }
+    .girl-left, 
+    .girl-right{
+        top: 10%;
+        height: 90%;
+    }
+    // .girl-left,
+    // .girl-right {
+    //     background-size: 90% auto;
+    // }
 
     .girl-left {
         width: 72%;
+        background-position: right bottom;
+
     }
 
     .girl-left::after {
@@ -279,24 +262,19 @@
     }
 
     .girl-right {
-        width: 50%;
+        width: 55%;
+        background-position: right bottom;
+
     }
-    .girl-left, 
-    .girl-right{
-        top: 10%;
-        height: 90%;
-    }
+
+
+
     .girl-right::after {
         width: 300px;
         height: 180px;
         left: auto;
         right: 10%;
         top: -10%;
-    }
-
-    .girl-left,
-    .girl-right {
-        background-position: right bottom;
     }
 
     .main__btn-wrapper {
