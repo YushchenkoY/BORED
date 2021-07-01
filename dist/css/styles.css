@@ -32,15 +32,12 @@
 }
 @keyframes btn {
   0% {
-    transform: translateY(150%);
     opacity: 0;
   }
-  50% {
-    transform: translateY(150%);
+  99% {
     opacity: 0;
   }
   100% {
-    transform: translateY(0);
     opacity: 1;
   }
 }
@@ -71,7 +68,7 @@
 }
 .header {
   width: 100%;
-  height: 68px;
+  height: 54px;
   color: white;
   display: flex;
   justify-content: space-between;
@@ -80,8 +77,8 @@
 }
 
 .header__logo {
-  width: 195px;
-  height: 48px;
+  width: 162px;
+  height: 40px;
 }
 
 .header__login {
@@ -102,9 +99,9 @@
 
 .header__btn {
   width: 130px;
-  height: 46px;
-  font-size: 26px;
-  line-height: 46px;
+  height: 40px;
+  font-size: 20px;
+  line-height: 40px;
 }
 
 @media (min-width: 560px) {
@@ -115,16 +112,6 @@
 @media (min-width: 768px) {
   .header__text {
     display: block;
-  }
-}
-@media (min-width: 992px) {
-  .header__text {
-    font-size: 20px;
-  }
-
-  .header__logo {
-    width: 227px;
-    height: 56px;
   }
 }
 @media (min-width: 1200px) {
@@ -139,7 +126,7 @@
 .main {
   position: relative;
   width: 100vw;
-  height: calc(100vh - 116px);
+  height: calc(100vh - 27px - 54px);
   background-image: url("../img/BG-mob.png");
   background-size: 100% 100%;
   display: flex;
@@ -205,13 +192,15 @@
   font-size: 24px;
   line-height: 46px;
   font-family: "Noto Sans KR", sans-serif;
-  font-style: italic;
   font-weight: bold;
   color: #FFFFFF;
   animation-name: btn2;
-  animation-duration: 3s;
+  animation-duration: 2s;
   animation-timing-function: ease;
   animation-iteration-count: infinite;
+  position: absolute;
+  bottom: 10%;
+  z-index: 100;
 }
 
 .btn:hover {
@@ -239,7 +228,7 @@
 .girl-left {
   left: 0;
   background-image: url(../img/girl-l.png);
-  width: 65%;
+  width: 72%;
   z-index: 1;
   animation-name: girl-left;
   position: relative;
@@ -331,7 +320,7 @@
 }
 @media (min-width: 992px) {
   .main__girl {
-    background-size: auto 90%;
+    background-size: auto 100%;
   }
 
   .girl-right::after {
@@ -361,6 +350,8 @@
     height: 85px;
     line-height: 85px;
     font-size: 38px;
+    left: 50px;
+    bottom: 20%;
   }
 
   .main {
@@ -370,11 +361,12 @@
   }
 
   .main__content {
+    position: absolute;
     padding-left: 50px;
-    height: 50%;
-    margin-top: calc(50% - height);
+    height: 35%;
     align-items: flex-start;
     width: auto;
+    z-index: 20;
   }
 
   .main__text-wrapper {
@@ -406,16 +398,23 @@
     width: 50%;
   }
 
+  .girl-left,
+.girl-right {
+    top: 10%;
+    height: 90%;
+  }
+
   .girl-right::after {
     width: 300px;
     height: 180px;
     left: auto;
     right: 10%;
+    top: -10%;
   }
 
   .girl-left,
 .girl-right {
-    background-position: center bottom;
+    background-position: right bottom;
   }
 
   .main__btn-wrapper {
@@ -424,7 +423,7 @@
 }
 .footer {
   width: 100vw;
-  height: 48px;
+  height: 27px;
   display: flex;
   justify-content: space-around;
 }
@@ -432,20 +431,10 @@
 .footer__link {
   font-family: "Montserrat", sans-serif;
   font-size: 12px;
-  line-height: 48px;
+  line-height: 27px;
   color: #323232;
 }
 
-@media (min-width: 768px) {
-  .footer__link {
-    font-size: 18px;
-  }
-}
-@media (min-width: 992px) {
-  .footer__link {
-    font-size: 24px;
-  }
-}
 @media (min-width: 1200px) {
   .footer {
     padding-left: 115px;
@@ -477,7 +466,6 @@ body {
   background: #F62465;
   border-radius: 10px;
   font-family: "Noto Sans KR", sans-serif;
-  font-style: italic;
   font-weight: bold;
   text-transform: uppercase;
   color: #FFFFFF;
