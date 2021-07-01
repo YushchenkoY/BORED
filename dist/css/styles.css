@@ -145,9 +145,16 @@
   animation-duration: 3s;
 }
 
+.main__title {
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 800;
+  font-size: 24px;
+  color: #FFFFFF;
+  margin: 10px 0;
+}
+
 .main__text {
   font-family: "Noto Sans KR", sans-serif;
-  font-style: italic;
   font-weight: 600;
   font-size: 18px;
   color: #FFFFFF;
@@ -261,6 +268,10 @@
 }
 
 @media (min-width: 560px) {
+  .main__title {
+    font-size: 36px;
+  }
+
   .main__text {
     font-size: 28px;
   }
@@ -313,6 +324,10 @@
   }
 }
 @media (min-width: 1200px) {
+  .main__title {
+    font-size: 38px;
+  }
+
   .main__text {
     font-size: 28px;
   }

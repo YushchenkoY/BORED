@@ -20,10 +20,16 @@
     animation-duration: 3s;
 }
 
+.main__title {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 800;
+    font-size: 24px;
+    color: #FFFFFF;
+    margin: 10px 0;
+}
 
 .main__text {
     font-family: 'Noto Sans KR', sans-serif;
-    font-style: italic;
     font-weight: 600;
     font-size: 18px;
     color: #FFFFFF;
@@ -138,6 +144,9 @@
 }
 
 @media (min-width: $breakpoint-s) {
+    .main__title {
+        font-size: 36px;
+    }
     .main__text {
         font-size: 28px;
     }
@@ -198,7 +207,9 @@
 
 
 @media (min-width: $breakpoint-xl) {
-
+    .main__title {
+        font-size: 38px;
+    }
     .main__text {
         font-size: 28px;
     }
@@ -243,10 +254,7 @@
         top: 10%;
         height: 90%;
     }
-    // .girl-left,
-    // .girl-right {
-    //     background-size: 90% auto;
-    // }
+
 
     .girl-left {
         width: 72%;
