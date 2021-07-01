@@ -38,9 +38,12 @@
 
 @keyframes btn {
     0% {
+        transform: translateY(150%);
         opacity: 0
     }
-    99% {
+
+    50% {
+        transform: translateY(150%);
         opacity: 0
     }
     100% {

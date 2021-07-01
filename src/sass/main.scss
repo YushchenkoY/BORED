@@ -16,7 +16,7 @@
     height: 35%;
     justify-content: center;
     animation-timing-function: ease;
-    animation-name: text;
+    animation-name: btn;
     animation-duration: 3s;
 }
 
@@ -49,6 +49,7 @@
 }
 
 .main__btn {
+    margin: 10px 0;
     padding: 0;
     width: 150px;
     height: 46px;
@@ -58,13 +59,13 @@
     font-family: 'Noto Sans KR', sans-serif;
     font-weight: bold;
     color: #FFFFFF;
-    animation-name: btn2;
-    animation-duration: 2s;
-    animation-timing-function: ease;
-    animation-iteration-count: infinite;
-    position: absolute;
-    bottom: 10%;
-    z-index: 100;
+    // animation-name: btn2;
+    // animation-duration: 2s;
+    // animation-timing-function: ease;
+    // animation-iteration-count: infinite;
+    // position: absolute;
+    // bottom: 10%;
+    // z-index: 100;
 }
 
 .btn:hover {
@@ -219,8 +220,8 @@
         height: 85px;
         line-height: 85px;
         font-size: 38px;
-        left: 50px;
-        bottom: 20%;
+        // left: 50px;
+        // bottom: 20%;
     }
 
     .main {
@@ -234,7 +235,7 @@
         position: absolute;
         padding-left: 50px;
         height: 35%;
-        align-items: flex-start;
+        // align-items: flex-start;
         width: auto;
         z-index: 20;
     }
