@@ -59,13 +59,6 @@
     font-family: 'Noto Sans KR', sans-serif;
     font-weight: bold;
     color: #FFFFFF;
-    // animation-name: btn2;
-    // animation-duration: 2s;
-    // animation-timing-function: ease;
-    // animation-iteration-count: infinite;
-    // position: absolute;
-    // bottom: 10%;
-    // z-index: 100;
 }
 
 .btn:hover {
@@ -148,9 +141,6 @@
     .main__title {
         font-size: 36px;
     }
-    .main__text {
-        font-size: 28px;
-    }
 
     .main__btn {
         width: 220px;
@@ -180,7 +170,6 @@
     .girl-right {
         background-position: center bottom;
         background-size: contain;
-
     }
 
     .girl-right::after {
@@ -208,11 +197,22 @@
 
 
 @media (min-width: $breakpoint-xl) {
+    .main {
+        flex-direction: row;
+        background-image: url("../img/BG.png");
+        align-items: center;
+    }
+
+    .main__content {
+        position: absolute;
+        padding-left: 50px;
+        height: 35%;
+        width: auto;
+        z-index: 20;
+    }
+
     .main__title {
         font-size: 38px;
-    }
-    .main__text {
-        font-size: 28px;
     }
 
     .main__btn {
@@ -220,26 +220,7 @@
         height: 85px;
         line-height: 85px;
         font-size: 38px;
-        // left: 50px;
-        // bottom: 20%;
     }
-
-    .main {
-        flex-direction: row;
-        background-image: url("../img/BG.png");
-        align-items: center;
-
-    }
-
-    .main__content {
-        position: absolute;
-        padding-left: 50px;
-        height: 35%;
-        // align-items: flex-start;
-        width: auto;
-        z-index: 20;
-    }
-
 
     .main__girls-wrapper {
         width: 65%;
@@ -250,17 +231,16 @@
         bottom: 0;
         left: 35%;
     }
-    .girl-left, 
-    .girl-right{
+
+    .girl-left,
+    .girl-right {
         top: 10%;
         height: 90%;
     }
 
-
     .girl-left {
         width: 72%;
         background-position: right bottom;
-
     }
 
     .girl-left::after {
@@ -273,10 +253,7 @@
     .girl-right {
         width: 55%;
         background-position: right bottom;
-
     }
-
-
 
     .girl-right::after {
         width: 300px;
@@ -285,9 +262,4 @@
         right: 10%;
         top: -10%;
     }
-
-    .main__btn-wrapper {
-        align-items: flex-start;
-    }
-
 }

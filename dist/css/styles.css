@@ -268,10 +268,6 @@
     font-size: 36px;
   }
 
-  .main__text {
-    font-size: 28px;
-  }
-
   .main__btn {
     width: 220px;
     height: 60px;
@@ -320,21 +316,6 @@
   }
 }
 @media (min-width: 1200px) {
-  .main__title {
-    font-size: 38px;
-  }
-
-  .main__text {
-    font-size: 28px;
-  }
-
-  .main__btn {
-    width: 350px;
-    height: 85px;
-    line-height: 85px;
-    font-size: 38px;
-  }
-
   .main {
     flex-direction: row;
     background-image: url("../img/BG.png");
@@ -347,6 +328,17 @@
     height: 35%;
     width: auto;
     z-index: 20;
+  }
+
+  .main__title {
+    font-size: 38px;
+  }
+
+  .main__btn {
+    width: 350px;
+    height: 85px;
+    line-height: 85px;
+    font-size: 38px;
   }
 
   .main__girls-wrapper {
@@ -388,10 +380,6 @@
     left: auto;
     right: 10%;
     top: -10%;
-  }
-
-  .main__btn-wrapper {
-    align-items: flex-start;
   }
 }
 .footer {
